@@ -6,8 +6,7 @@ body {
   #memory-board  {
    display: flex;
    flex-wrap: wrap;
-   margin-top: -60px;
-    
+   margin-top: -80px;
     background:rgb(107, 11, 110);
     border-radius: 10px;
     font-size: 30px;
@@ -17,7 +16,8 @@ body {
     margin-left: 55%;
     
   }
-  #memory-cards{
+  
+  .memory-cards{
     background:rgb(252, 247, 247);
     border-radius: 5px;
     font-size: 30px;
@@ -26,6 +26,8 @@ body {
     padding: 10px;
     margin: 5px;
     margin-left: 10%;
+    transform-style: preserve-3d;
+    transition: transform .5s;
   }
   #memory-cards:active{
     transform: scale(.80);
@@ -33,6 +35,44 @@ body {
   img{
   width: 50px;
   }
+  #memory-board2  {
+     background:rgb(107, 11, 110);
+     border-radius: 10px;
+     font-size: 30px;
+     font-family: Arial;
+     width: 90px;
+    padding: 10px;
+    margin-left: 30%;
+    margin-top: -20%;
+     
+   }
+   #card-to-guess{
+    background:rgb(252, 247, 247);
+    border-radius: 5px;
+    font-size: 30px;
+    font-family: Arial;
+    padding: 10px;
+    margin: 5px;
+    height: 60px;
+    aspect-ratio: 1;
+   
+  }
+  .front-face {
+    background:rgb(252, 247, 247);
+    backface-visibility: hidden;
+  }
+  .back-face {
+    background:rgb(252, 247, 247);
+    
+  }
+  .memory-cards.turn{
+    transform: rotateY(180deg);
+  }
+  .front-face{
+    transform: rotateY(180deg);
+  } 
+    
+
   h1{
     color: rgb(214, 250, 214);
     text-align: center;
@@ -46,15 +86,20 @@ body {
       margin-top: 30px;
       }
 
- .buttons:active{
-   transform: scale(.97);
-   }
+   .buttons:active{
+      transform: scale(.97);
+      }
   #score {
     color: rgb(214, 250, 214);
     text-align:right;
     font-size:20px;
+    margin-right: 40px;
     }
+.restart {
+  visibility: hidden;
+  }
 
+ 
   
 
 

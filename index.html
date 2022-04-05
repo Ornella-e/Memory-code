@@ -9,6 +9,7 @@
       </head>
       <body>
         <div>
+          <canvas id="intro" width="1430" height="60"></canvas>
           <h1>Memory Code</h1>
         </div>
         <div class="buttons">
@@ -16,79 +17,68 @@
           <button class="restart">Start again</button>
         </div>
         <div id="instructions">
-          <h3>Instructions</h3>
+          <canvas id="intro2" width="430" height="100"><h3>Instructions</h3></canvas>
         </div>
         <div id="score">
           <h2>Score</h2>
           <p>Points: <span id="pairs-clicked">0</span></p>
         </div>
         <div id="memory-board">
-        <div id="memory-cards">
-          <!---ADD FRONT BACKGROUND ---> 
-          <p1 class="front-face" ><span id="number-one-card"></span></p1> 
-          <img class="back-face" src="images/Bash.png">
+        <div class="memory-cards" data-name="Bash">
+          <img class="front-face" src="images/Bash.png" alt="Bash">
+          <p class="back-face" ><span id="number-one-card"></span></p> 
         </div>
-        <div id="memory-cards">
-          <!---ADD FRONT BACKGROUND ---> 
-          <p1 class="front-face" ></p1> 
-          <img class="back-face" src="images/c++.png">
+        <div class="memory-cards" data-name="C++">
+         <img class="front-face" src="images/c++.png" alt="C++">
+          <p1 class="back-face" ></p1> 
         </div>
-        <div id="memory-cards">
-          <!---ADD FRONT BACKGROUND ---> 
-          <p1 class="front-face" ></p1> 
-          <img class="back-face" src="images/Chrome.png">
+        <div class="memory-cards" data-name="Chrome">
+          <img class="front-face" src="images/Chrome.png" alt="Chrome">
+          <p1 class="back-face" ></p1> 
         </div>
-        <div id="memory-cards">
-          <!---ADD FRONT BACKGROUND ---> 
-          <p1 class="front-face" ></p1> 
-          <img class="back-face" src="images/css.png">
+        <div class="memory-cards" data-name="Css">
+          <img class="front-face" src="images/css.png" alt="Css">
+          <p1 class="back-face" ></p1> 
         </div>
-        <div id="memory-cards">
-          <!---ADD FRONT BACKGROUND ---> 
-          <p1 class="front-face" ></p1> 
-          <img class="back-face" src="images/git.png">
+        <div class="memory-cards" data-name="git">
+          <img class="front-face" src="images/git.png" alt="git">
+          <p1 class="back-face" ></p1> 
         </div>
-        <div id="memory-cards">
-          <!---ADD FRONT BACKGROUND ---> 
-          <p1 class="front-face" ></p1> 
-          <img class="back-face" src="images/github.png">
+        <div class="memory-cards" data-name="gitHub">
+          <img class="front-face" src="images/github.png" alt="gitHub">
+          <p1 class="back-face" ></p1> 
         </div>
-        <div id="memory-cards">
-          <!---ADD FRONT BACKGROUND ---> 
-          <p1 class="front-face" ></p1> 
-          <img class="back-face" src="images/html.png">
+        <div class="memory-cards" data-name="Html">
+          <img class="front-face" src="images/html.png" alt="Html">
+          <p1 class="back-face" ></p1> 
         </div>
-        <div id="memory-cards">
-          <!---ADD FRONT BACKGROUND ---> 
-          <p1 class="front-face" ></p1> 
-          <img class="back-face" src="images/Java.png">
+        <div class="memory-cards" data-name="Java">
+          <img class="front-face" src="images/Java.png" alt="Java">
+          <p1 class="back-face" ></p1> 
         </div>
-        <div id="memory-cards">
-          <!---ADD FRONT BACKGROUND ---> 
-          <p1 class="front-face" ></p1> 
-          <img class="back-face" src="images/Javascript.png">
+        <div class="memory-cards" data-name="Javascript">
+          <img class="front-face" src="images/Javascript.png" alt="Javascript">
+          <p1 class="back-face" ></p1> 
         </div>
-        <div id="memory-cards">
-          <!---ADD FRONT BACKGROUND ---> 
-          <p1 class="front-face" ></p1> 
-          <img class="back-face" src="images/Python.png">
+        <div class="memory-cards" data-name="Python">
+          <img class="front-face" src="images/Python.png" alt="Python">
+          <p1 class="back-face" ></p1> 
         </div>
-        <div id="memory-cards">
-          <!---ADD FRONT BACKGROUND ---> 
-          <p1 class="front-face" ></p1> 
-          <img class="back-face" src="images/ruby.png">
+        <div class="memory-cards" data-name="Ruby">
+          <img class="front-face" src="images/ruby.png" alt="Ruby">
+          <p1 class="back-face" ></p1> 
         </div>
-        <div id="memory-cards">
-          <!---ADD FRONT BACKGROUND ---> 
-          <p1 class="front-face" ></p1> 
-          <img class="back-face" src="images/VSC.png">
+        <div class="memory-cards"data-name="Visual Studio Code">
+          <img class="front-face" src="images/VSC.png" alt="Visual Studio Code">
+          <p1 class="back-face" ></p1> 
         </div>
+        </div>
+        <div id= "memory-board2">
+        <div id="card-to-guess"> </div>
       </div>
-      <div class="card-to-guess">
-        <p2 class="front-face"> <span id="number-one-card">0</span></p2> 
-          <img class="back-face">
-      </div>
+     
+      <script src="./js/game.js"></script>
     <script src="./js/cards.js"></script>
-    <script src="./js/game.js"></script>
+    <script src="./js/canvas.js"></script>
       </body>
 </html>

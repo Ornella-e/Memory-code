@@ -1,7 +1,7 @@
 The Memory Code 
 Description:
 The Memory Code is a dynamic game which consist of cards with different coding logos. And it consists of 
-6 cards on the left side and one card of the right side. Both will be shown 3 seconds each first the left side and 
+12 cards on the left side and one card of the right side. Both will be shown 3 seconds each first the left side and 
 then the right side. Everytime the player needs to guess the card before the time is done. 
 
 
