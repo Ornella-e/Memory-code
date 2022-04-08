@@ -1,5 +1,5 @@
 
-    const canvas= document.getElementById('intro');
+   const canvas= document.getElementById('intro');
     const ctx=canvas.getContext('2d');
  
   function draw (){
@@ -25,19 +25,7 @@
   }
   draw()
 
-  // Game Intro
- /* const canvas2=document.getElementById('#intro2');
-  ctx=canvas2.getContext('2d');
-  function drawIntro (){
 
-    ctx.fillStyle='grey';
-    ctx.fillRect(50, 50, 50, 30);
-
-  }
-  drawIntro()*/
-
-  //add you won!
-  //add you lose :( Try again!
 
 
     

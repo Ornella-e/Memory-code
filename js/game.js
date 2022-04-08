@@ -19,13 +19,13 @@ class MemoryCode {
     }
 
     //check if the player won - if player reaches 12 points
-    checkIfWon (){
+    checkIfWon(){
         if (this.score === 12){
             console.log ("Congratulations!You won!");
-        }
-    }
-    //check if the player lose - if player picked wrong card
-    checkIfLose () {
-        return this.leftCard !== this.rightCards;
-    }
+            document.querySelector('.winner').classList.remove('hidden');
+            document.querySelector('#game-container').classList.add('hidden');
+
+        }    
+    }   
+   
 }

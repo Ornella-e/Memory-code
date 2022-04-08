@@ -1,41 +1,59 @@
-The Memory Code 
+Memory Code 
+
 Description:
-The Memory Code is a dynamic game which consist of cards with different coding logos. And it consists of 
-12 cards on the left side and one card of the right side. Both will be shown 3 seconds each first the left side and 
-then the right side. Everytime the player needs to guess the card before the time is done. 
+Memory Code is a dynamic game which consist of cards with different coding logos. The player has a board with 
+12 cards on one side and one card on the other side. Both will be shown one second each, first the one card and 
+then the board. Everytime the player needs to guess which cards match. 
 
 
 MVP
 DOM
--> game has one card on the right and six cards on the left
--> the cards on the left are shown for three seconds 
--> cards on the left side have numbers on the back
--> the card on the right is shown for three seconds, on this time player chooses one card on the left side
--> player has three seconds to guess which card from left side matches the one on the right side
--> if player chooses wrong needs to restart the game
+-> game has one card on one side and a board on the other
+-> the cards are shown for one second 
+-> the board is shown and the player chooses a card
+-> if the player guesses the 12 cards he wins
+-> if the player chooses wrong needs to restart the game
 
 
 Backlog
--> add scoreboard
--> restart game
+->increase level of dificulty if the player wins
 
 Data structure
+splash.js
+.eventListener()
 
 Game.js
-. Game (){}
+. Class MemoryCode {}
+. checkIfMatched (){}
+. checkIfWon(){}
 
-
-Player.js
-. Player (){}
 
 Cards.js
-. mixCards (){}
-. checkIfMatched (){}
+. startGame (){}
+. turnLeftCard (){}
+. pickRandomCard(){}
+. turnAllCards(){}
+. turnCard(){}
+. createEvenListeners(){}
+. scorePoints (){}
+. resetGame(){}
 
-style.css
+Canvas.js
+. draw(){}
+
+
+Styles.css
 . body
-. card
+. splash
+. buttons
+. memory-cards
+. memory-board
+. card-to-guess
 . score
+. winner
+. loser
+
+Images
 
 
 States y State Transitions
@@ -44,9 +62,8 @@ States y State Transitions
 . gameoverScreen
 . winScreen
 
-Task
-
-Game - dom
+Links: 
+https://ornella-e.github.io/Memory-code/
 
 
 
