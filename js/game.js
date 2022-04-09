@@ -24,8 +24,8 @@ class MemoryCode {
             console.log ("Congratulations!You won!");
             document.querySelector('.winner').classList.remove('hidden');
             document.querySelector('#game-container').classList.add('hidden');
-
         }    
+        
     }   
    
 }

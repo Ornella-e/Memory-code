@@ -1,8 +1,7 @@
 Memory Code 
 
 Description:
-Memory Code is a dynamic game which consist of cards with different coding logos. The player has a board with 
-12 cards on one side and one card on the other side. Both will be shown one second each, first the one card and 
+Memory Code is a dynamic game which consists of cards with different coding logos. The player has a board with 12 cards on one side and 1 card on the other side. Both will be shown one second each, first the one card and 
 then the board. Everytime the player needs to guess which cards match. 
 
 
@@ -17,18 +16,19 @@ DOM
 
 Backlog
 ->increase level of dificulty if the player wins
+->sound 
 
 Data structure
 splash.js
 .eventListener()
 
-Game.js
+Game.js -> The main file of the game
 . Class MemoryCode {}
 . checkIfMatched (){}
 . checkIfWon(){}
 
 
-Cards.js
+Cards.js -> All functions related to the movement of the cards 
 . startGame (){}
 . turnLeftCard (){}
 . pickRandomCard(){}
@@ -63,7 +63,11 @@ States y State Transitions
 . winScreen
 
 Links: 
+
+https://trello.com/b/MO88ooDc/memory-code
 https://ornella-e.github.io/Memory-code/
+https://slides.com/ornella_e/bold-349b15
+
 
 
 
