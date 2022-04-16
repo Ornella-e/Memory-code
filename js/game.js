@@ -5,11 +5,7 @@ class MemoryCode {
         this.rightCards  = [];
         this.score = 0;
     } 
-
-    //add methods
  
-   
-    //check if they matched
     checkIfMatched(randomLeftCard,randomRightCard){
         if (randomLeftCard === randomRightCard){
         this.score ++;
@@ -18,14 +14,21 @@ class MemoryCode {
         return false;
     }
 
-    //check if the player won - if player reaches 12 points
+    
     checkIfWon(){
-        if (this.score === 12){
-            console.log ("Congratulations!You won!");
+        if (this.score === 12){ 
             document.querySelector('.winner').classList.remove('hidden');
             document.querySelector('#game-container').classList.add('hidden');
+            document.querySelector(".startLevelTwo");
         }    
         
-    }   
+    }  
+    checkIfWonSecondL(){
+        if (this.score === 24){   
+            document.querySelector('.winner').classList.remove('hidden');
+            document.querySelector('#game-container').classList.add('hidden');  
+        }    
+        
+    }  
    
 }

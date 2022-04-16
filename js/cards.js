@@ -6,7 +6,7 @@ const originalCards = [
   { name: "Chrome", images: "Chrome.png" },
   { name: "Python", images: "Python.png" },
   { name: "C++", images: "c++.png" },
-  { name: "Bash", images: "bash.png" },
+  { name: "Bash", images: "Bash.png" },
   { name: "Java", images: "Java.png" },
   { name: "git", images: "git.png" },
   { name: "gitHub", images: "github.png" },
@@ -22,7 +22,8 @@ const startButton = document.querySelector(".start");
 const restartButton = document.querySelector(".restart");
 startButton.addEventListener("click", startGame);
 restartButton.addEventListener('click',()=>{location.href='./index.html';});
-
+const startLevelTwo=document.querySelector(".startLevelTwo");
+startLevelTwo.addEventListener("click", startSecondGame);
 let rightCards = document.querySelectorAll(".memory-cards");
 
 function startGame() {
@@ -100,6 +101,7 @@ function createEventListeners() {
 function scorePoints() {
   score.textContent = memoryCode.score;
   memoryCode.checkIfWon();
+  memoryCode.checkIfWonSecondL();
 }
 
 //function to restart game
@@ -109,4 +111,54 @@ function resetGame() {
     card.classList.remove("turn");
   });
   cards = [...originalCards];
+}
+
+function startSecondGame() {
+  document.querySelector('#game-container').classList.remove('hidden');
+ document.querySelector('.winner').classList.add('hidden');
+  resetGame();
+  pickRandomCard();
+  turnLeftCardSecL();
+  turnAllCardsSecL();
+  createEventListeners();
+}
+function turnLeftCardSecL() {
+  setTimeout(() => {
+    document.querySelector("#card-to-guess").innerHTML = "";
+    turnAllCardsSecL();
+  }, 800);
+}
+function turnAllCardsSecL() {
+  rightCards.forEach((card) => {
+    if (!card.classList.contains("locked")) {
+      card.classList.toggle("turn");
+      setTimeout(() => {
+        card.classList.toggle("turn");
+      }, 800);
+    }
+  });
+}
+function turnCardSecL(e) {
+  if (!e.target.classList.contains("locked")) {
+    e.target.classList.toggle("turn");
+    if (memoryCode.checkIfMatched(memoryCode.leftCard, e.target.dataset.name)) {
+      e.target.classList.add("locked");
+      cards = cards.filter((card) => card.name != memoryCode.leftCard);
+      scorePoints();
+      if (memoryCode.score < 24) {
+        pickRandomCard();
+      }
+      turnLeftCardSecL();
+     
+    } else {
+       //check if the player lose - if player picked wrong card
+       document.querySelector(".loser").classList.remove("hidden");
+       document.querySelector("#game-container").classList.add("hidden");
+      setTimeout(() => {
+        resetGame();
+      }, 1000);
+      
+    }
+    
+  }
 }
